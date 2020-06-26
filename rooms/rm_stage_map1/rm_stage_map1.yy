@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_map1",
+    "name": "rm_stage_map1",
     "id": "0f9d56ed-5dc2-4eec-bab1-6ad31dc488b7",
     "creationCodeFile": "",
     "inheritCode": false,

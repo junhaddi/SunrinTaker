@@ -10,43 +10,56 @@ var hspd = (right - left) * grid;
 var vspd = (down - up) * grid;
 
 if (hspd != 0) {
-	if (!instance_place(x + hspd, y, obj_wall)) {
+	// 횡 이동
+	if (!instance_place(x + hspd, y, obj_par_inst) || (isKey && instance_place(x + hspd, y, obj_lock_door))) {
 		x += hspd;
+	} else {	
+		// 나쁜놈 밀기
+		var enemy = collision_point(x + hspd, y, obj_enemy, false, true);
+		if (enemy != noone) {
+			if (!instance_place(enemy.x + hspd, enemy.y, obj_par_inst)) {
+				enemy.x += hspd;
+			} else if (instance_place(enemy.x + hspd, enemy.y, obj_wall) || (instance_place(enemy.x + hspd, enemy.y, obj_rock))) {
+				with(enemy) {
+					instance_destroy();
+				}
+			}
+		}
+		// 돌 밀기
+		var rock = collision_point(x + hspd, y, obj_rock, false, true);
+		if (rock != noone) {
+			if (!instance_place(rock.x + hspd, rock.y, obj_par_inst)) {
+				rock.x += hspd;
+			}
+		}
 	}
 } else {
-	if (!instance_place(x, y + vspd, obj_wall)) {
+	// 종 이동
+	if (!instance_place(x, y + vspd, obj_par_inst) || (isKey && instance_place(x, y + vspd, obj_lock_door))) {
 		y += vspd;
+	} else {	
+		// 나쁜놈 밀기
+		var enemy = collision_point(x, y + vspd, obj_enemy, false, true);
+		if (enemy != noone) {
+			if (!instance_place(enemy.x, enemy.y + vspd, obj_par_inst)) {
+				enemy.y += vspd;
+			} else if (instance_place(enemy.x, enemy.y + vspd, obj_wall) || (instance_place(enemy.x, enemy.y + vspd, obj_rock))) {
+				with(enemy) {
+					instance_destroy();
+				}
+			}
+		}
+		// 돌 밀기
+		var rock = collision_point(x, y + vspd, obj_rock, false, true);
+		if (rock != noone) {
+			if (!instance_place(rock.x, rock.y + vspd, obj_par_inst)) {
+				rock.y += vspd;
+			}
+		}
 	}
 }
 
 // TODO 걷는 애니메이션 출력
 if (hspd != 0 && vspd != 0) {
 	global.life--;
-}
-
-// 나쁜놈 말기
-var enemy = collision_point(x, y, obj_enemy, false, true);
-if (enemy != noone) {
-	if (instance_place(enemy.x + hspd, enemy.y + vspd, obj_wall)) {
-		with(enemy) {
-			instance_destroy();
-		}
-	} else {
-		enemy.x += hspd;
-		enemy.y += vspd;
-	}
-}
-
-// 나쁜놈 말기
-var rock = collision_point(x, y, obj_rock, false, true);
-if (rock != noone) {
-	show_debug_message(rock);
-	var solidList = [obj_enemy, obj_rock];
-	for (var i = 0; i < array_length_1d(solidList); i++) {
-		if (!instance_place(rock.x + hspd, rock.y + vspd, solidList[i])) {
-			rock.x += hspd;
-			rock.y += vspd;
-			break;
-		}
-	}
 }
