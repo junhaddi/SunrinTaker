@@ -1,4 +1,3 @@
-isKey = false;
-
 event_inherited();
 
+isKey = false;

@@ -1,0 +1,1 @@
+global.leftTurn = 1;
