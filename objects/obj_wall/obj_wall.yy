@@ -5,7 +5,7 @@
     "name": "obj_wall",
     "eventList": [
         {
-            "id": "40622278-eff1-49f1-8eab-76872a726785",
+            "id": "4c84b27c-44dc-4c10-8c5d-7faefc2922f4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "27b30ec2-0b67-47a5-8a03-34a7c8560821"
         },
         {
-            "id": "b368e153-451b-44d2-b42c-f159af1b8740",
+            "id": "b05caa55-7cea-4a9b-9246-028b5397b323",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "27b30ec2-0b67-47a5-8a03-34a7c8560821"
         },
         {
-            "id": "4bb04370-c16d-4515-8a97-029ce816c659",
+            "id": "ce932bcd-7226-4a82-92a5-b2f607be7e0c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

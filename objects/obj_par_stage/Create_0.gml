@@ -1,1 +1,1 @@
-global.leftTurn = 1;
+global.leftTurn = 1000;
