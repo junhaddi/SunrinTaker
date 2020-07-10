@@ -63,6 +63,38 @@
             }
         },
         {
+            "Key": "953d533f-9045-4a9d-b188-5605d746b633",
+            "Value": {
+                "id": "953d533f-9045-4a9d-b188-5605d746b633",
+                "resourcePath": "rooms\\rm_stage2\\rm_stage2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "6fc8eb5a-9cd7-4c9e-8c28-61a653270cb5",
+            "Value": {
+                "id": "6fc8eb5a-9cd7-4c9e-8c28-61a653270cb5",
+                "resourcePath": "rooms\\rm_stage3\\rm_stage3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "4acc5b4d-c7a2-42b8-b816-e408adbf315c",
+            "Value": {
+                "id": "4acc5b4d-c7a2-42b8-b816-e408adbf315c",
+                "resourcePath": "rooms\\rm_stage7\\rm_stage7.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "1860e836-17a1-4499-a2bb-dda9fb41ec70",
+            "Value": {
+                "id": "1860e836-17a1-4499-a2bb-dda9fb41ec70",
+                "resourcePath": "rooms\\rm_stage8\\rm_stage8.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "110f7798-8bf7-4a05-838d-48fb4a3aa4dc",
             "Value": {
                 "id": "d9ff4351-0860-45e6-8eef-380dfd6c3cb1",
